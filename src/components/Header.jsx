@@ -1,13 +1,19 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import {Container} from "./Containter";
+import {Container} from './Containter'
 
 const Header = () => {
-    return (
-        <div>
+  return (
+    <>
+      <Container/>
+      <div>
+          123213
+          asd
 
-        </div>
-    );
-};
+      </div>
+    </>
 
-export default Header;
+  )
+}
+
+export default Header
