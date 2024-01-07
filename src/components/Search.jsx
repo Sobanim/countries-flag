@@ -25,10 +25,10 @@ const Input = styled.input.attrs({
   margin-left: 2rem;
   border: none;
   outline: none;
-  background: var(--colors-bg);
+  background: var(--colors-ui-base);
   color: var(--colors-text);
 `
-// eslint-disable-next-line react/prop-types
+
 const Search = ({search, setSearch}) => {
   return (
     <InputContainer>
