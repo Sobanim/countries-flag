@@ -30,13 +30,13 @@ const ModeSwitcher = styled.div`
   color: var(--colors-text);
   font-size: var(--fs-sm);
   cursor: pointer;
-  //font-weight: var(--fw-bold);
+  font-weight: var(--fw-bold);
   text-transform: capitalize;
 `
 const Header = () => {
   const [theme, setTheme] = useState('light')
 
-  const toogleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
+  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme)
@@ -46,7 +46,7 @@ const Header = () => {
       <Container>
         <Wrapper>
           <Title>Where is the world?</Title>
-          <ModeSwitcher onClick={toogleTheme}>
+          <ModeSwitcher onClick={toggleTheme}>
             { theme === 'light' ? (
               <IoMoonOutline size={'14px'} style={{marginRight: '0.75rem'}}/>
             ) : (
