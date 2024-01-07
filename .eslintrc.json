@@ -24,6 +24,7 @@
         "jsx-quotes": ["error", "prefer-single"],
         "max-len": ["error", {
             "code": 160
-        }]
+        }],
+        "react/prop-types": "off"
     }
 }
