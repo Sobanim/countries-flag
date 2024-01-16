@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Details = () => {
+const Details = ({match}) => {
+  console.log('match', match)
   return (
     <div>
             Details
