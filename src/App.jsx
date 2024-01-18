@@ -10,7 +10,6 @@ import NotFound from './pages/NotFound'
 function App () {
   const [countries, setCountries] = useState([])
 
-
   return (
     <>
       <Header />

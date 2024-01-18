@@ -7,8 +7,10 @@ import Card from '../components/Card'
 import {useNavigate} from 'react-router-dom'
 
 const HomePage = ({countries, setCountries}) => {
-  const [filteredCountries, setFilteredCountries] = useState(countries)
   const navigate = useNavigate()
+
+  const [filteredCountries, setFilteredCountries] = useState(countries)
+
 
   const handleSearch = (search, region) => {
     let data = [...countries]
@@ -25,12 +27,15 @@ const HomePage = ({countries, setCountries}) => {
   }
 
   useEffect(() => {
-    if(!countries.length) {
-      axios.get(ALL_COUNTRIES)
-        .then( ({data}) => setCountries(data) )
-    }
-
+    // if(!countries.length) {
+    axios.get(ALL_COUNTRIES)
+      .then( ({data}) => setCountries(data) )
+    // }
   }, [])
+
+  useEffect(() => {
+    handleSearch()
+  }, [countries])
   return (
     <>
       <Controls onSearch={handleSearch} />

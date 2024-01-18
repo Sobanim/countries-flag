@@ -9,7 +9,7 @@ import Info from '../components/Info'
 
 const Details = () => {
   const {name} = useParams()
-  const {push, goBack} = useNavigate()
+  const navigate = useNavigate()
 
   const [country, setCountry] = useState(null)
   console.log('country', country)
@@ -21,11 +21,10 @@ const Details = () => {
 
   return (
     <div>
-      <Button onClick={goBack}>
+      <Button onClick={() => navigate(-1)}>
         <IoArrowBack />Back
       </Button>
-            Details {name}
-      {/*{ country ? <Info {...country} /> : null }*/}
+      { country && (<Info navigate={navigate} {...country} />) }
     </div>
   )
 }
