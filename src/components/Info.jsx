@@ -89,7 +89,6 @@ const Tag = styled.span`
 `
 
 
-
 const Info = (props) => {
   const { name, nativeName, flag, capital, population, region, subregion, topLevelDomain, currencies = [], languages = [], borders = [], navigate } = props
 
