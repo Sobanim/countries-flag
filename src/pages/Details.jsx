@@ -14,6 +14,7 @@ const Details = () => {
   const [country, setCountry] = useState(null)
 
   useEffect(() => {
+    document.title = name
     axios.get(searchByCountry(name))
       .then(({data}) => setCountry(data[0]))
   }, [name])

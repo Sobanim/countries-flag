@@ -1,3 +1,16 @@
+# Country Flags
+This is country flags project, which is working on free api **restcountries**.
+In this project  I used the following technologies:
+
+![JavaScript](https://img.icons8.com/color/48/javascript.png)
+![React](https://img.icons8.com/plasticine/46/react.png)
+<img alt="React Router Dom" src="https://reactrouter.com/_brand/react-router-stacked-color.png" height="48">
+![Styled Components](https://img.icons8.com/color/48/styled-components.png)
+![Axios](https://axios-http.com/assets/logo.svg)
+
+👉[Click and view Country Flags project](https://countries-flag-five.vercel.app/)
+--------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
