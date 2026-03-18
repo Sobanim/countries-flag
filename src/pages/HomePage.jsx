@@ -11,7 +11,6 @@ const HomePage = ({countries, setCountries}) => {
 
   const [filteredCountries, setFilteredCountries] = useState(countries)
 
-
   const handleSearch = (search, region) => {
     let data = [...countries]
 
@@ -43,14 +42,14 @@ const HomePage = ({countries, setCountries}) => {
         { filteredCountries.map((c) => {
           const countryInfo = {
             img: c.flags.svg,
-            name: c.name,
+            name: c.name.common,
             info: [
               { title: 'Population', description: c.population.toLocaleString() },
               { title: 'Region', description: c.region },
               { title: 'Capital', description: c.capital },
             ]
           }
-          return <Card key={c.name} onClick={() => navigate(`/country/${c.name}`)} {...countryInfo} />
+          return <Card key={c.name.common} onClick={() => navigate(`/country/${c.name.common}`)} {...countryInfo} />
         }) }
       </List>
     </>
